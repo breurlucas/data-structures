@@ -2,6 +2,10 @@ package implementation;
 
 import net.datastructures.ArrayStack;
 
+/*
+ * 
+ * @author Lucas Breur 
+ */
 public class ParenthesisMatching {
     
     //  Method that verifies the matching of brackets
