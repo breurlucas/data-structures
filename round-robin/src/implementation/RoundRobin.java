@@ -27,11 +27,14 @@ public class RoundRobin {
         while (!Q.isEmpty()) {
             process = Q.dequeue();
             int temp = process.getLoad();
-            process.setLoad(temp -= 3);
+            // Service the process
+            temp -= 3;
+            process.setLoad(temp);
             if (temp <= 0) {
             System.out.println("Process " + process.getPid() + " is finished!");
             }
             else {
+            	// Enqueue the process if not finished
                 Q.enqueue(process);
                 System.out.println("Process " + process.getPid() + " is at " +
                         temp + " load");
